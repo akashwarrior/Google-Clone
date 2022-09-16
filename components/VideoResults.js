@@ -19,6 +19,7 @@ function VideoResults(result) {
                   layout="fill"
                   unoptimized="true"
                   alt="logos"
+                  objectFit="contain"
                   />
                   </div>
               </span>
