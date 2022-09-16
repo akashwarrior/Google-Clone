@@ -10,7 +10,7 @@ function PaginationButtons() {
     <div className="flex w-full justify-around text-blue-700 p-7 px-20">
       {startIndex >= 10 && (
         <Link
-          href={`/search?term${router.query.term}&start=${startIndex - 10}`}
+          href={`/All?term=${router.query.term}&start=${startIndex - 10}`}
         >
           <div className="flex flex-frow flex-col items-center cursor-pointer hover:underline">
             <ChevronLeftIcon className="h-5" />
@@ -18,7 +18,7 @@ function PaginationButtons() {
           </div>
         </Link>
       )}
-      <Link href={`/All?term${router.query.term}&start=${startIndex + 10}`}>
+      <Link href={`/All?term=${router.query.term}&start=${startIndex + 10}`}>
         <div className="flex flex-frow flex-col items-center cursor-pointer hover:underline">
           <ChevronRightIcon className="h-5" />
           <p>Next</p>
