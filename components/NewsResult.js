@@ -22,6 +22,7 @@ function NewsResult({ result }) {
                   unoptimized="true"
                   alt="logos"
                   loading="lazy"
+                  objectFit="contain"
                   />
                   </div>
               </span>
