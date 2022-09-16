@@ -1,11 +1,5 @@
 import Head from "next/head";
-import {
-  ViewGridIcon,
-  MicrophoneIcon,
-  SearchIcon,
-  XIcon,
-  UserIcon,
-} from "@heroicons/react/solid";
+import { ViewGridIcon,MicrophoneIcon,SearchIcon,XIcon,UserIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import { useRef } from "react";
@@ -14,7 +8,6 @@ import { useRouter } from "next/router";
 export default function Home() {
   const router = useRouter();
   const searchInputRef = useRef(null);
-
 
   const clear = (e) => {
     const inputValue = e.target.value;
@@ -28,12 +21,13 @@ export default function Home() {
   const search = (e) => {
     e.preventDefault();
 
-
     const term = searchInputRef.current.value;
 
     if (!term) return;
     router.push(`/All?term=${term}`);
   };
+
+
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <Head>
@@ -72,13 +66,7 @@ export default function Home() {
             Gmail
           </p>
           <p
-            onClick={() =>
-              router.push(
-                `/ImageSearch?term=${
-                  router.query.term ? router.query.term : ""
-                }`
-              )
-            }
+            onClick={() =>router.push(`/ImageSearch?term=${router.query.term}`)}
             className="link"
           >
             Images
@@ -97,6 +85,7 @@ export default function Home() {
         {/* Image */}
         <Image
           src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+          alt="Google"
           width={300}
           height={100}
           priority
@@ -128,13 +117,13 @@ export default function Home() {
           <button onClick={search} className="btn">
             Google Search
           </button>
-            <span className="btn cursor-pointer text-center" onClick={() => location.href="https://www.google.com/doodles"}>
-              I'm Feeling Lucky
-            </span>
+          <span className="btn cursor-pointer text-center" onClick={() => (location.href = "https://www.google.com/doodles")}>
+            I`m Feeling Lucky
+          </span>
         </div>
       </form>
 
       <Footer />
     </div>
-  );
+  )
 }

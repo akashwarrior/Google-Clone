@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function NewsResult({ result }) {
   function src(item) {
     return item.source.href;
@@ -12,11 +14,17 @@ function NewsResult({ result }) {
           >
             <a href={item.link} target="blank">
               <div className="flex items-center">
-                <span>
-                  <img
-                    src={`http://www.google.com/s2/favicons?domain=${item.source.href}`}
+              <span className="border border-[#f1f3f4] flex items-center justify-center w-[28px] h-[28px] rounded-full bg-[#f1f3f4] p-1 mr-[10px] ">
+                <div className="relative w-full h-full">
+              <Image
+                  src={`http://www.google.com/s2/favicons?domain=${item.source.href}`}
+                  layout="fill"
+                  unoptimized="true"
+                  alt="logos"
+                  loading="lazy"
                   />
-                </span>
+                  </div>
+              </span>
                 <p className="ml-1">{item.source.title}</p>
               </div>
               <p className="font-bold text-xl text-[#1558d6]">{item.title}</p>

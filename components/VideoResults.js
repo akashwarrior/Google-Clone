@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function VideoResults(result) {
   return (
     <div className=" overflow-hidden bg-gray-100 sm:bg-white">
@@ -10,12 +12,16 @@ function VideoResults(result) {
             <a href={video.url} target="blank">
               <p className="text-sm truncate">{video.url}</p>
               <div className="flex pt-1">
-                <img
-                  loading="lazy"
-                  className="w-fit self-start pt-2"
+              <span className="border border-[#f1f3f4] flex items-center justify-center w-[28px] h-[28px] rounded-full bg-[#f1f3f4] p-1 mr-[10px] ">
+                <div className="relative w-full h-full">
+              <Image
                   src={`http://www.google.com/s2/favicons?domain=${video.url}`}
-                  alt=""
-                />
+                  layout="fill"
+                  unoptimized="true"
+                  alt="logos"
+                  />
+                  </div>
+              </span>
                 <div className="px-2 overflow-x-auto">
                   <p className="font-bold text-lg text-[#1558d6]">
                     {video.title + " - " + video.site}

@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Header from "../components/Header";
 import VideoResults from "../components/VideoResults";
 
-function VideoSearch({ videoData }) {
+function Videos({ videoData }) {
   const router = useRouter();
   return (
     <div>
@@ -18,7 +18,7 @@ function VideoSearch({ videoData }) {
   );
 }
 
-export default VideoSearch;
+export default Videos;
 
 export async function getServerSideProps(context) {
   const options = {

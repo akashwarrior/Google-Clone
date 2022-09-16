@@ -45,6 +45,7 @@ function Header() {
       <div className="flex flex-col sm:flex-row w-full p-6 items-center">
         <Image
           src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+          alt="Google"
           height={40}
           width={120}
           onClick={() => router.push("/")}

@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-function HeaderOption({ Icons, title, selected }) {
+function HeaderOption({ Icons, title }) {
   const router = useRouter();
   function change(title) {
     switch (title) {
@@ -14,7 +14,7 @@ function HeaderOption({ Icons, title, selected }) {
         router.push(`${title}?term=${router.query.term}`);
         return;
       default:
-        router.push(`/VideoSearch?term=${router.query.term}`)
+        router.push(`/Videos?term=${router.query.term}`)
         return;
     }
   }

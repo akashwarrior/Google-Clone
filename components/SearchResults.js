@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Footer from "./Footer";
 import PaginationButtons from "./PaginationButtons";
 
@@ -18,14 +19,14 @@ function SearchResults({ results }) {
           >
             <span className="flex items-center">
               <span className="border border-[#f1f3f4] flex items-center justify-center w-[28px] h-[28px] rounded-full bg-[#f1f3f4] p-1 mr-[10px] ">
-                <img
-                  className="h-[18px] w-[18px]"
-                  src={
-                    "https://s2.googleusercontent.com/s2/favicons?domain=http://" +
-                    item.displayLink
-                  }
-                  alt="logo"
-                />
+                <div className="relative w-full h-full">
+              <Image
+                  src={`https://s2.googleusercontent.com/s2/favicons?domain=http://${item.displayLink}`}
+                  layout="fill"
+                  unoptimized="true"
+                  alt="logos"
+                  />
+                  </div>
               </span>
               <div className="flex flex-col">
                 <span className=" leading-4 text-base capitalize text-[#202124] font-[400]">

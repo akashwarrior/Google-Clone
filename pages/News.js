@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Header from "../components/Header";
 import NewsResult from "../components/NewsResult";
 
-function NewsSearch({ newsData }) {
+function News({ newsData }) {
   const router = useRouter();
   return (
     <div>
@@ -19,7 +19,7 @@ function NewsSearch({ newsData }) {
   );
 }
 
-export default NewsSearch;
+export default News;
 
 export async function getServerSideProps(context) {
   const data = await fetch(

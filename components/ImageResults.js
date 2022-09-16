@@ -18,6 +18,7 @@ function ImageResults({ result }) {
                     objectFit="contain"
                     unoptimized="true"
                     loading="lazy"
+                    alt={item.source.title}
                   />
                 </div>
               </a>

@@ -4,8 +4,9 @@ import Header from "../components/Header";
 import SearchResults from "../components/SearchResults";
 import { API_KEY, CONTEXT_KEY } from "../keys";
 
-function search({ results }) {
+function All({ results }) {
   const router = useRouter();
+
   return (
     <div>
       <Head>
@@ -19,7 +20,7 @@ function search({ results }) {
   );
 }
 
-export default search;
+export default All;
 
 export async function getServerSideProps(context) {
   const startIndex = context.query.start || "0";

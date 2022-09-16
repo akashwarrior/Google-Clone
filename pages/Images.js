@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Header from "../components/Header";
 import ImageResults from "../components/ImageResults";
 
-function ImageSearch({ imageData }) {
+function Images({ imageData }) {
   const router = useRouter();
   return (
     <div>
@@ -18,7 +18,7 @@ function ImageSearch({ imageData }) {
   );
 }
 
-export default ImageSearch;
+export default Images;
 
 export async function getServerSideProps(context) {
   const data = await fetch(
