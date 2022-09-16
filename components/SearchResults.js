@@ -25,6 +25,7 @@ function SearchResults({ results }) {
                   layout="fill"
                   unoptimized="true"
                   alt="logos"
+                  object-fit="contain"
                   />
                   </div>
               </span>
